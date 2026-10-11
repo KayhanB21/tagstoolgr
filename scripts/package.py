@@ -7,7 +7,8 @@ manifest = json.loads((root / 'manifest.json').read_text())
 out = root / 'dist' / f"tagstoolgr-{manifest['version']}.xpi"
 out.parent.mkdir(exist_ok=True)
 with ZipFile(out, 'w', ZIP_DEFLATED) as archive:
-    archive.write(root / 'manifest.json', 'manifest.json')
+    for name in ('manifest.json', 'LICENSE', 'NOTICE'):
+        archive.write(root / name, name)
     for folder in ('src', 'popup', 'icons'):
         for path in sorted((root / folder).rglob('*')):
             if path.is_file() and not path.name.startswith('.'):

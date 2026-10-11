@@ -14,7 +14,7 @@ The selection is captured when the picker opens and expires after one hour. It i
 
 ## Install for testing
 
-The packaged add-on is `dist/tagstoolgr-0.1.0.xpi`.
+Download `tagstoolgr-0.1.0.xpi` from the [v0.1.0 release](https://github.com/KayhanB21/tagstoolgr/releases/tag/v0.1.0). Local builds are written to `dist/`.
 
 In Thunderbird, open Add-ons and Themes → gear menu → Install Add-on From File, then choose the XPI. Alternatively, open Tools → Developer Tools → Debug Add-ons → Load Temporary Add-on and select `manifest.json`.
 
@@ -43,3 +43,7 @@ Automated unit tests cover pagination, deduplication, add/replace/clear semantic
 Before release, test in Thunderbird 140 and a current release with local and IMAP folders: one/many messages, more than 100 selected messages, collapsed threads, a right-click outside the active selection, tag creation/rename/deletion while enabled, multiple windows, no tags, no selection, and moved or unavailable messages. Verify light/dark appearance and keyboard navigation. The build has not been submitted to the Thunderbird add-ons site.
 
 API references: [tag definitions](https://webextension-api.thunderbird.net/en/mv3/messages.tags.html), [message updates](https://webextension-api.thunderbird.net/en/mv3/messages.html), [selection](https://webextension-api.thunderbird.net/en/mv3/mailTabs.html), [context menus](https://webextension-api.thunderbird.net/en/mv3/menus.html).
+
+## License
+
+Source code is licensed under the [Mozilla Public License 2.0](LICENSE). The supplied Parthenon photograph and derived image assets are excluded from this source-code license; no separate image license has been established.
