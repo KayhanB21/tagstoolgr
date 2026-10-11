@@ -1,0 +1,27 @@
+:root { color-scheme: light dark; font: 14px/1.45 system-ui, sans-serif; --surface: oklch(98% .006 250); --ink: oklch(25% .01 250); --muted: oklch(46% .015 250); --line: oklch(82% .012 250); --accent: oklch(47% .15 255); --hover: oklch(94% .015 250); }
+@media (prefers-color-scheme: dark) { :root { --surface: oklch(22% .008 250); --ink: oklch(93% .006 250); --muted: oklch(75% .01 250); --line: oklch(45% .01 250); --accent: oklch(72% .12 250); --hover: oklch(29% .015 250); } }
+* { box-sizing: border-box; }
+body { width: 360px; max-width: 100vw; margin: 0; padding: 20px; color: var(--ink); background: var(--surface); }
+h1 { font-size: 20px; margin: 0 0 4px; }
+p { margin: 0 0 16px; color: var(--muted); }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+legend { font-weight: 600; margin-bottom: 8px; }
+.tags { max-height: 235px; overflow-y: auto; margin-bottom: 16px; border-block: 1px solid var(--line); padding-block: 5px; }
+.tag { display: flex; align-items: center; gap: 10px; padding: 8px 4px; overflow-wrap: anywhere; cursor: pointer; }
+.tag:hover { background: var(--hover); }
+input { accent-color: var(--accent); flex-shrink: 0; }
+.swatch { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; border: 1px solid var(--line); }
+.mode { display: block; margin-bottom: 6px; font-weight: 600; }
+select, button { font: inherit; border: 1px solid var(--line); border-radius: 5px; padding: 8px 10px; color: var(--ink); background: var(--surface); }
+select { width: 100%; }
+#hint { font-size: 12px; margin: 6px 0 18px; }
+footer { display: flex; justify-content: space-between; gap: 12px; }
+button { cursor: pointer; }
+button:hover { background: var(--hover); }
+.primary { background: var(--accent); color: var(--surface); border-color: var(--accent); font-weight: 600; }
+.primary:hover { filter: brightness(.92); background: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+button:disabled, fieldset:disabled { opacity: .55; cursor: default; }
+#status { margin: 14px 0 0; overflow-wrap: anywhere; }
+#status:empty { display: none; }
+#status.error { color: light-dark(oklch(45% .17 25), oklch(78% .12 25)); }

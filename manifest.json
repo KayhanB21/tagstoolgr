@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "TagsToolGR",
+  "version": "0.1.0",
+  "description": "Add, replace, or clear tags on selected messages in one action.",
+  "author": "Kayhan",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tagstoolgr@kayhan.dev",
+      "strict_min_version": "140.0"
+    }
+  },
+  "permissions": [
+    "messagesRead",
+    "messagesUpdate",
+    "messagesTagsList",
+    "menus",
+    "storage"
+  ],
+  "icons": {
+    "48": "icons/parthenon-48.png",
+    "96": "icons/parthenon-96.png",
+    "128": "icons/parthenon-128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ],
+    "type": "module"
+  },
+  "action": {
+    "default_title": "TagsToolGR",
+    "default_icon": {
+      "16": "icons/parthenon-16.png",
+      "24": "icons/parthenon-24.png",
+      "32": "icons/parthenon-32.png",
+      "48": "icons/parthenon-48.png",
+      "64": "icons/parthenon-64.png"
+    },
+    "default_popup": "popup/popup.html"
+  }
+}
