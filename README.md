@@ -14,7 +14,7 @@ The selection is captured when the picker opens and expires after one hour. It i
 
 ## Install for testing
 
-Download `tagstoolgr-0.1.0.xpi` from the [v0.1.0 release](https://github.com/KayhanB21/tagstoolgr/releases/tag/v0.1.0). Local builds are written to `dist/`.
+Download `tagstoolgr-0.1.1.xpi` from the [v0.1.1 release](https://github.com/KayhanB21/tagstoolgr/releases/tag/v0.1.1). Local builds are written to `dist/`.
 
 In Thunderbird, open Add-ons and Themes → gear menu → Install Add-on From File, then choose the XPI. Alternatively, open Tools → Developer Tools → Debug Add-ons → Load Temporary Add-on and select `manifest.json`.
 

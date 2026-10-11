@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "TagsToolGR",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add, replace, or clear tags on selected messages in one action.",
   "author": "Kayhan",
   "browser_specific_settings": {
