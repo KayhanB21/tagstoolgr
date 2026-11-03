@@ -1,5 +1,5 @@
-:root { color-scheme: light dark; font: 14px/1.45 system-ui, sans-serif; --surface: oklch(98% .006 250); --ink: oklch(25% .01 250); --muted: oklch(46% .015 250); --line: oklch(82% .012 250); --accent: oklch(47% .15 255); --hover: oklch(94% .015 250); }
-@media (prefers-color-scheme: dark) { :root { --surface: oklch(22% .008 250); --ink: oklch(93% .006 250); --muted: oklch(75% .01 250); --line: oklch(45% .01 250); --accent: oklch(72% .12 250); --hover: oklch(29% .015 250); } }
+:root { color-scheme: light dark; font: 14px/1.45 system-ui, sans-serif; --surface: oklch(98% .006 250); --ink: oklch(25% .01 250); --muted: oklch(46% .015 250); --line: oklch(82% .012 250); --accent: oklch(47% .15 255); --accent-hover: oklch(40% .15 255); --hover: oklch(94% .015 250); }
+@media (prefers-color-scheme: dark) { :root { --surface: oklch(22% .008 250); --ink: oklch(93% .006 250); --muted: oklch(75% .01 250); --line: oklch(45% .01 250); --accent: oklch(72% .12 250); --accent-hover: oklch(80% .1 250); --hover: oklch(29% .015 250); } }
 * { box-sizing: border-box; }
 /* The host measures content to size the toolbar popup. Viewport-relative
    bounds can trap it at its initial narrow width. */
@@ -20,9 +20,10 @@ select { width: 100%; }
 #hint { font-size: 12px; margin: 6px 0 18px; }
 footer { display: flex; justify-content: space-between; gap: 12px; }
 button { cursor: pointer; }
-button:hover { background: var(--hover); }
+button:hover:not(:disabled) { background: var(--hover); }
 .primary { background: var(--accent); color: var(--surface); border-color: var(--accent); font-weight: 600; }
-.primary:hover { filter: brightness(.92); background: var(--accent); }
+/* Solid hover color instead of a CSS filter. A user report showed Apply disappearing on hover in Thunderbird on Windows. */
+.primary:hover:not(:disabled) { background: var(--accent-hover); border-color: var(--accent-hover); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 button:disabled, fieldset:disabled { opacity: .55; cursor: default; }
 #status { margin: 14px 0 0; overflow-wrap: anywhere; }
